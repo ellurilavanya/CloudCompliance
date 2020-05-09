@@ -1,0 +1,2138 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#"
+     xml:base="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#hasCSAcontrol -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#hasCSAcontrol">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#hasCloudControls -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#hasCloudControls">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#partofRegulationControls"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Standards"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Controls"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_threats"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#hasCloudThreatsPolicy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#hasCloudThreatsPolicy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Regulations"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_threats"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#hasCommonPolicies -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#hasCommonPolicies">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#partofCommonPolicies"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Policies"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Common_Obligations"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#hasComplianceModels -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#hasComplianceModels">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Providers"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Consumers"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Regulations"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#hasConsumerPolicies -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#hasConsumerPolicies">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#partofConsumerPolicies"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Policies"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Consumer_Obligations"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#hasPCIDSSPolicies -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#hasPCIDSSPolicies">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#partofPCIDSS"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#hasProviderPolicies -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#hasProviderPolicies">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#partofProviderPolicies"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Policies"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Provider_Obligations"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#hasRegulations -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#hasRegulations">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Providers"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Regulations"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#partofCommonPolicies -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#partofCommonPolicies"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#partofConsumerPolicies -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#partofConsumerPolicies">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#partofPCIDSS -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#partofPCIDSS">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#PCIDSS_Policies"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#PCIDSS_Provider_Obligations"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#partofProviderPolicies -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#partofProviderPolicies"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#partofRegulationControls -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#partofRegulationControls">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Controls"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_threats"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#dbpedia:OvercomesThreat -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#dbpedia:OvercomesThreat">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#dbpedia:SupportsStandard -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#dbpedia:SupportsStandard">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#dbpedia:implementsStandard -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#dbpedia:implementsStandard">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#dbpedia:supportsSecurityControl -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#dbpedia:supportsSecurityControl">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Control_Measures -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Control_Measures">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#PCI_DSS_Provider_Rules"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Common_Responsiblites -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Common_Responsiblites">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Common_Rules"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Common_Rules -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Common_Rules">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Compliance_Declaration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Compliance_Declaration">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Consumer_Rules"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Consumer_Responsiblities -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Consumer_Responsiblities">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Consumer_Rules"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Consumer_Rules -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Consumer_Rules">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Coomunicate_Data_Breach -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Coomunicate_Data_Breach">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Consumer_Rules"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Cooperation_with_SA -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Cooperation_with_SA">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Common_Rules"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Data_Breach_Notification -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Data_Breach_Notification">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Common_Rules"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Data_Protection -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Data_Protection">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Consumer_Rules"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Hire_Data_Protection_Officer -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Hire_Data_Protection_Officer">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Provider_Rules"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Identify_Representatives -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Identify_Representatives">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Consumer_Rules"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Joint_Consumers -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Joint_Consumers">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Consumer_Rules"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Processing_Activities -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Processing_Activities">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Common_Rules"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Processing_Security -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Processing_Security">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Common_Rules"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Processing_under_Authority -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Processing_under_Authority">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Provider_Rules"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Processor_Responsibilites -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Processor_Responsibilites">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Provider_Rules"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Provider_Rules -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Provider_Rules">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Right_to_liability -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Right_to_liability">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Common_Rules"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Territorial_Scope -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Territorial_Scope">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Common_Rules"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Transfer_Principles -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Transfer_Principles">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Provider_Rules"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#PCI_DSS_Provider_Rules -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#PCI_DSS_Provider_Rules">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Protect_Data -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Protect_Data">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#PCI_DSS_Provider_Rules"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#ProviderPolicies -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#ProviderPolicies"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Secure_Network -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Secure_Network">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#PCI_DSS_Provider_Rules"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Security -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Security">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#PCI_DSS_Provider_Rules"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Test_Networks -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Test_Networks">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#PCI_DSS_Provider_Rules"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Vulnerability_Management -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Vulnerability_Management">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#PCI_DSS_Provider_Rules"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Providers -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Providers">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Stake_Holders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Controls -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Controls"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Standards -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Standards">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Regulations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_awareness_and_training -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_awareness_and_training">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Controls"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_compliance_audit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_compliance_audit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Controls"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_portability_and_interoperability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_portability_and_interoperability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Controls"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_threats -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_threats"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Computer_access_control -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Computer_access_control">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Controls"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Consumers -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Consumers">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Stake_Holders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Contengency_plan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Contengency_plan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Controls"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Data_center_services -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Data_center_services">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Controls"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Data_encryption -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Data_encryption">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Encryption"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Key_management"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Encryption -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Encryption">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Controls"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Common_Obligations -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Common_Obligations">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Policies"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Consumer_Obligations -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Consumer_Obligations">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Policies"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Policies -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Policies">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Regulations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Provider_Obligations -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Provider_Obligations">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Policies"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Sections -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Sections">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Policies"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Identification_and_authentication -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Identification_and_authentication">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Controls"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Incident_management -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Incident_management">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Controls"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Key_management -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Key_management">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Encryption"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#PCIDSS_Policies -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#PCIDSS_Policies">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Regulations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#PCIDSS_Provider_Obligations -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#PCIDSS_Provider_Obligations">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#PCIDSS_Policies"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Public-key_encryption -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Public-key_encryption">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Data_encryption"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Regulations -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Regulations"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Stake_Holders -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Stake_Holders"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Abuse_of_cloud_computing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Abuse_of_cloud_computing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_threats"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Account_hijacking -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Account_hijacking">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_threats"/>
+        <partofRegulationControls rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR"/>
+        <partofRegulationControls rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#PCI_DSS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Akamai_technologies -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Akamai_technologies">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Providers"/>
+        <hasRegulations rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Amazon.com -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Amazon.com">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Providers"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Application_security -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Application_security">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Controls"/>
+        <partofRegulationControls rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR"/>
+        <partofRegulationControls rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#PCI_DSS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Art.24 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Art.24">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Sections"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Art.25 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Art.25">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Sections"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Art.26 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Art.26">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Sections"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Art.27 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Art.27">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Sections"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Art.29 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Art.29">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Sections"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Art.30 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Art.30">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Sections"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Art.31 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Art.31">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Sections"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Art.32 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Art.32">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Sections"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Art.33 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Art.33">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Sections"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Art.34 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Art.34">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Sections"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Art.37 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Art.37">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Sections"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Art.44 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Art.44">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Sections"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Art.5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Art.5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Sections"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Art.82 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Art.82">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Sections"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Attribute_based_access_control -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Attribute_based_access_control">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Computer_access_control"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Authentication -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Authentication">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Identification_and_authentication"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Authorization -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Authorization">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Identification_and_authentication"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#COBIT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#COBIT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Standards"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#CloudAudit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#CloudAudit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Standards"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_auditing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_auditing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_compliance_audit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_security_awareness_policies_and_procedure -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_security_awareness_policies_and_procedure">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_awareness_and_training"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_security_training -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_security_training">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_awareness_and_training"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Common_Responsiblites -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Common_Responsiblites">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Common_Obligations"/>
+        <partofCommonPolicies rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Compliance_Declaration -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Compliance_Declaration">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Consumer_Obligations"/>
+        <partofConsumerPolicies rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Consumer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Consumer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Consumers"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Consumer_Responsiblities -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Consumer_Responsiblities">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Consumer_Obligations"/>
+        <partofConsumerPolicies rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Content_protection_and_security -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Content_protection_and_security">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Standards"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Coomunicate_Data_Breach -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Coomunicate_Data_Breach">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Consumer_Obligations"/>
+        <partofConsumerPolicies rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cooperation_with_SA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cooperation_with_SA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Common_Obligations"/>
+        <partofCommonPolicies rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#DMTF-CADF -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#DMTF-CADF">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Standards"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Data_Breach_Notification -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Data_Breach_Notification">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Common_Obligations"/>
+        <partofCommonPolicies rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Data_Protection -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Data_Protection">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Consumer_Obligations"/>
+        <partofConsumerPolicies rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Data_breach -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Data_breach">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_threats"/>
+        <partofRegulationControls rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR"/>
+        <partofRegulationControls rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#PCI_DSS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Data_center_management -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Data_center_management">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Data_center_services"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Data_loss -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Data_loss">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_threats"/>
+        <partofRegulationControls rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Denial-of-service_attack -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Denial-of-service_attack">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_threats"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Department_of_Defense_Information_Assurance_Certification_and_Accreditation_Process -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Department_of_Defense_Information_Assurance_Certification_and_Accreditation_Process">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Standards"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#EDRM-PSRRM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#EDRM-PSRRM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Standards"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Electronic_discovery -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Electronic_discovery">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Controls"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Establishment_of_incident_framework_management -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Establishment_of_incident_framework_management">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Incident_management"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#FIPS_140-2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#FIPS_140-2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Standards"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#FISMA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#FISMA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Standards"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Federal_Risk_and_Authorization_Management_Program -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Federal_Risk_and_Authorization_Management_Program">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Standards"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Policies"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Regulations"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Google -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Google">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Providers"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Health_Insurance_Portability_and_Accountability_Act -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Health_Insurance_Portability_and_Accountability_Act">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Standards"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Hire_Data_Protection_Officer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Hire_Data_Protection_Officer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Provider_Obligations"/>
+        <partofProviderPolicies rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#IBM_cloud_computing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#IBM_cloud_computing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Providers"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#IEC_177992000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#IEC_177992000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Standards"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#IEC_27001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#IEC_27001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Standards"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#IEC_27002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#IEC_27002">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Standards"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#IEEE_P2301 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#IEEE_P2301">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Standards"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#ISO_20000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#ISO_20000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Standards"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#IT_security_contengency_plan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#IT_security_contengency_plan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Contengency_plan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Identification -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Identification">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Identification_and_authentication"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Identify_Representatives -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Identify_Representatives">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Consumer_Obligations"/>
+        <partofConsumerPolicies rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Incident_classification -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Incident_classification">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Incident_management"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Incident_closure -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Incident_closure">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Incident_management"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Incident_detection -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Incident_detection">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Incident_management"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Incident_investigation_and_analysis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Incident_investigation_and_analysis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Incident_management"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Information_Security_Policies -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Information_Security_Policies">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#PCIDSS_Provider_Obligations"/>
+        <partofPCIDSS rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#PCI_DSS"/>
+        <Security rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maintain a policy that addresses information security for all personnel. This ensures that the PCI DSS policies that has been established, published, maintained has descriptive clear definitions of the procedures that everyone in the system knows thoroughly; and such policy must be reviewed at least once a year</Security>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Insecure_interface_and_API -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Insecure_interface_and_API">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_threats"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Insider_threat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Insider_threat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_threats"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Insufficient_due_diligence -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Insufficient_due_diligence">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_threats"/>
+        <partofRegulationControls rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR"/>
+        <partofRegulationControls rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#PCI_DSS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Integrated_Key_Management_System -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Integrated_Key_Management_System">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Key_management"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#International_Traffic_in_Arms_Regulations -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#International_Traffic_in_Arms_Regulations">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Standards"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Interoperability -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Interoperability">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_portability_and_interoperability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Joint_Consumers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Joint_Consumers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Consumer_Obligations"/>
+        <partofConsumerPolicies rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Maintain_Secure_Network -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Maintain_Secure_Network">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#PCIDSS_Provider_Obligations"/>
+        <partofPCIDSS rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#PCI_DSS"/>
+        <Secure_Network rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Install and maintain a firewall configuration to protect cardholder data. The network configuration and its security requirements should be the shared by the IT team and cloud service providers. Define system password and its security parameters. This means that all the default passwords supplied by the providers should be changed when a system is getting installed in the configured network</Secure_Network>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Mandatory_access_control -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Mandatory_access_control">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Computer_access_control"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Media_protection -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Media_protection">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Controls"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Monitor_and_Test_Networks -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Monitor_and_Test_Networks">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#PCIDSS_Provider_Obligations"/>
+        <partofPCIDSS rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#PCI_DSS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Motion_Picture_Association_of_America -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Motion_Picture_Association_of_America">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Standards"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#NIST_800-12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#NIST_800-12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Standards"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#NIST_800-16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#NIST_800-16">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Standards"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#NIST_800-34 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#NIST_800-34">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Standards"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#NIST_800-50 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#NIST_800-50">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Standards"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#NIST_800-53 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#NIST_800-53">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Standards"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#NIST_800-61 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#NIST_800-61">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Standards"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#OAuth -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#OAuth">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Standards"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#PCI_DSS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#PCI_DSS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#PCIDSS_Policies"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Regulations"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Payment_Card_Industry_Data_Security_Standard -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Payment_Card_Industry_Data_Security_Standard">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Standards"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Pretty_Good_Privacy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Pretty_Good_Privacy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Public-key_encryption"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Processing_Activities -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Processing_Activities">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Common_Obligations"/>
+        <partofCommonPolicies rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Processing_Security -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Processing_Security">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Common_Obligations"/>
+        <partofCommonPolicies rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Processing_under_Authority -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Processing_under_Authority">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Provider_Obligations"/>
+        <partofProviderPolicies rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Processor_Responsibilites -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Processor_Responsibilites">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Provider_Obligations"/>
+        <partofProviderPolicies rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Protect_Card_Holder_Data -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Protect_Card_Holder_Data">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#PCIDSS_Provider_Obligations"/>
+        <partofPCIDSS rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#PCI_DSS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Rackspace_cloud -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Rackspace_cloud">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Providers"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Resolution_and_recovery -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Resolution_and_recovery">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Incident_management"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Right_to_liability -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Right_to_liability">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Common_Obligations"/>
+        <partofCommonPolicies rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Risk_assessment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Risk_assessment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Controls"/>
+        <partofRegulationControls rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR"/>
+        <partofRegulationControls rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#PCI_DSS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Role-based_access_control -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Role-based_access_control">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Computer_access_control"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Safe_Harbor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Safe_Harbor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Standards"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Security -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Security">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Controls"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Security_Technical_Implementation_Guide -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Security_Technical_Implementation_Guide">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Standards"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Shared_technology_vulnerability -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Shared_technology_vulnerability">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_threats"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Statement_on_Auditing_Standards_No._70_Service_Organizations -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Statement_on_Auditing_Standards_No._70_Service_Organizations">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Standards"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Strong_Access_Control_Measures -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Strong_Access_Control_Measures">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#PCIDSS_Provider_Obligations"/>
+        <partofPCIDSS rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#PCI_DSS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Symmetric-key_algorithm -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Symmetric-key_algorithm">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Data_encryption"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Territorial_Scope -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Territorial_Scope">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Common_Obligations"/>
+        <partofCommonPolicies rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR"/>
+        <GDPR_Territorial_Scope rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This Regulation applies to the processing of personal data by a controller not established in the Union, but in a place where Member State law applies by virtue of public international law.</GDPR_Territorial_Scope>
+        <GDPR_Territorial_Scope rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This Regulation applies to the processing of personal data in the context of the activities of an establishment of a controller or a processor in the Union, regardless of whether the processing takes place in the Union or not.</GDPR_Territorial_Scope>
+        <GDPR_Territorial_Scope rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This Regulation applies to the processing of personal data of data subjects who are in the Union by a controller or processor not established in the Union, where the processing activities are related to:
+(a) the offering of goods or services, irrespective of whether a payment of the data subject is required, to such data subjects in the Union; or
+(b) the monitoring of their behaviour as far as their behaviour takes place within the Union.</GDPR_Territorial_Scope>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Third-Party_Key_Management_System -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Third-Party_Key_Management_System">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Key_management"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Transfer_Principles -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Transfer_Principles">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Provider_Obligations"/>
+        <partofProviderPolicies rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR"/>
+        <GDPR_Transfer_Principles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Controllers that are part of a group of undertakings or institutions affiliated to a central body may have a legitimate interest in transmitting personal data within the group of undertakings for internal administrative purposes, including the processing of clients&apos; or employees&apos; personal data. The general principles for the transfer of personal data, within a group of undertakings, to an undertaking located in a third country remain unaffected</GDPR_Transfer_Principles>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Vaultive -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Vaultive">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Standards"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Virtualization -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Virtualization">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Controls"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Vulnerability_Management_Program -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Vulnerability_Management_Program">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#PCIDSS_Provider_Obligations"/>
+        <partofPCIDSS rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#PCI_DSS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#portability -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#portability">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_portability_and_interoperability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Art.28(1) -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Art.28(1)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Sections"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Art.28(2-4),10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Art.28(2-4),10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Sections"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Art.3(1) -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Art.3(1)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Sections"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Oasis_(organization) -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Oasis_(organization)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Standards"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#RSA_(cryptosystem)&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#RSA_(cryptosystem)&apos;">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Public-key_encryption"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Sarbanes–Oxley_Act -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Sarbanes–Oxley_Act">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Security_Standards"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_awareness_and_training"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_compliance_audit"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_portability_and_interoperability"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Computer_access_control"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Contengency_plan"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Data_center_services"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Encryption"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Identification_and_authentication"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Incident_management"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Common_Obligations"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Consumer_Obligations"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Provider_Obligations"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#hasCommonPolicies"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#hasConsumerPolicies"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#hasProviderPolicies"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#s">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#t">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#z">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inference of data property for GDPR Common Class</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S7</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Common_Obligations"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Providers"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Common_Rules"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#s"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#z"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#ProviderPolicies"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#t"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#z"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inference for Common Policies in Cloud Provider Class</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Policies"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Providers"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#hasCommonPolicies"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#s"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#z"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#hasComplianceModels"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#t"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#z"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inference for Provider Policies in Cloud Provider Class</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Policies"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Providers"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#hasProviderPolicies"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#s"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#z"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#hasComplianceModels"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#t"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#z"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inference of data property for GDPR Provider Class</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S6</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Provider_Obligations"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Providers"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Provider_Rules"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#s"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#z"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#ProviderPolicies"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#t"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#z"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inference for PCIDSS Policies in Cloud Provider Class</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S3</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#PCIDSS_Policies"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Providers"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#hasPCIDSSPolicies"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#s"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#z"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#hasComplianceModels"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#t"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#z"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inference of PCI DSS Data Properties</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S5</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#PCIDSS_Provider_Obligations"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Cloud_Providers"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#PCI_DSS_Provider_Rules"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#s"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#z"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#ProviderPolicies"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#t"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#z"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inference for Consumer Policies in Consumer Class</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S4</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#GDPR_Policies"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#Consumers"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#hasConsumerPolicies"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#s"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#z"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#hasComplianceModels"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#t"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/lavi/ontologies/2019/6/Cloud_Compliance_Final#z"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
